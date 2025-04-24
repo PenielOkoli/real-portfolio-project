@@ -1,0 +1,31 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+
+      - name: Copy files to EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@<your-ec2-ip> "
+            cd ~/ &&
+            rm -rf my-portfolio &&
+            git clone https://github.com/<your-username>/<your-repo>.git my-portfolio &&
+            cd my-portfolio &&
+            npm install &&
+            npm run build &&
+            pm2 delete all || true &&
+            pm2 start npm --name 'portfolio' -- start"
