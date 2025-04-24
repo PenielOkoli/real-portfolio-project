@@ -13,13 +13,13 @@ const About = () => {
           <div className="md:w-1/2">
             <h3 className="text-2xl font-semibold mb-6">Who I Am</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              I'm a technical product manager with a passion for building innovative solutions at the intersection of fintech and artificial intelligence. With a strong background in computer science and business strategy, I excel at translating complex technical concepts into actionable product roadmaps.
+              I&apos;m a technical product manager with a passion for building innovative solutions at the intersection of fintech and artificial intelligence. With a strong background in computer science and business strategy, I excel at translating complex technical concepts into actionable product roadmaps.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               My journey in tech began with software development, which gave me a solid foundation for understanding engineering challenges. This technical expertise, combined with my product management skills, allows me to effectively bridge the gap between business objectives and technical implementation.
             </p>
             <p className="text-gray-600 dark:text-gray-300">
-              When I'm not working on products, you can find me mentoring aspiring product managers, contributing to open-source projects, or exploring the latest trends in AI and blockchain technology.
+              When I&apos;m not working on products, you can find me mentoring aspiring product managers, contributing to open-source projects, or exploring the latest trends in AI and blockchain technology.
             </p>
           </div>
 
