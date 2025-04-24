@@ -20,12 +20,10 @@ jobs:
 
       - name: Copy files to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@<your-ec2-ip> "
-            cd ~/ &&
-            rm -rf my-portfolio &&
-            git clone https://github.com/<your-username>/<your-repo>.git my-portfolio &&
-            cd my-portfolio &&
-            npm install &&
-            npm run build &&
-            pm2 delete all || true &&
-            pm2 start npm --name 'portfolio' -- start"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "
+          cd ${{ secrets.EC2_PROJECT_PATH }} &&
+          git pull &&
+          npm install &&
+          npm run build &&
+          pm2 restart portfolio || pm2 start npm --name 'real-portfolio-project' -- start
+        "
