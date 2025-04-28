@@ -13,7 +13,7 @@ const Footer = () => {
               Tochukwu Okoli
             </Link>
             <p className="mt-2 text-gray-400">
-            Frontend Developer | Financial Market Analyst & Crypto Enthusiast
+            Frontend Developer | Financial Market Analyst &amp; Crypto Enthusiast
             </p>
           </div>
 
