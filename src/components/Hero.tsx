@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Hi, I&apos;m <span className="text-indigo-600 dark:text-indigo-400">Tochukwu Okoli</span>
+              Hi, I&apos;m <span className="text-indigo-600 dark:text-indigo-400"> Tochukwu Okoli </span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300">
               Cloud Infrastructure Intern | Frontend Developer
