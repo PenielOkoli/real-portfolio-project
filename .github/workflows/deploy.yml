@@ -2,13 +2,13 @@ name: Deploy to EC2
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -18,23 +18,9 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
 
-      - name: Wait for SSH
+      - name: Copy files and deploy
         run: |
-          for i in {1..10}; do
-            if nc -z -w5 ${{ secrets.EC2_HOST }} 22; then
-              echo "SSH is ready"
-              exit 0
-            fi
-            sleep 5
-          done
-          echo "SSH connection timed out"
-          exit 1
-
-      - name: Deploy to EC2
-        run: |
-          ssh -o StrictHostKeyChecking=no \
-              -o ConnectTimeout=30 \
-              ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "
+          ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "
             cd ${{ secrets.EC2_PROJECT_PATH }} &&
             git pull &&
             npm ci &&
