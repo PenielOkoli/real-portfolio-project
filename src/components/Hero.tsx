@@ -70,7 +70,7 @@ const Hero = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-indigo-500 shadow-xl">
               <Image
-                src="/public/images/profile.png"
+                src="./public/images/profile.png"
                 alt="Tochukwu Okoli"
                 // width={150}  // Set explicit dimensions
                 // height={150}
