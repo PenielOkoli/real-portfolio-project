@@ -28,7 +28,7 @@ const Hero = () => {
                 Contact Me
               </Link>
               <Link
-                href="./public/resume.pdf" // Update this path to your resume file
+                href="/public/resume.pdf" // Update this path to your resume file
                 download
                 className="px-6 py-3 border border-indigo-600 text-indigo-600 dark:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
               >
