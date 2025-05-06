@@ -8,7 +8,7 @@ const projects = [
     title: 'AI-Powered Financial Assistant',
     description: 'A conversational AI that helps users manage personal finances, providing insights and recommendations based on spending patterns.',
     tags: ['AI', 'NLP', 'Fintech', 'React', 'Node.js'],
-    image: '/public/images/project-1.jpg',
+    image: '/images/project-1.jpg',
     github: '#',
     live: '#'
   },
@@ -17,7 +17,7 @@ const projects = [
     title: 'Blockchain Payment Gateway',
     description: 'Decentralized payment solution that enables cross-border transactions with minimal fees using smart contracts.',
     tags: ['Blockchain', 'Smart Contracts', 'Web3', 'Solidity'],
-    image: '/public/images/project-2.jpg',
+    image: '/images/project-2.jpg',
     github: '#',
     live: '#'
   },
@@ -26,7 +26,7 @@ const projects = [
     title: 'Credit Risk Assessment Tool',
     description: 'Machine learning model that analyzes alternative data sources to assess creditworthiness for underbanked populations.',
     tags: ['Machine Learning', 'Python', 'Flask', 'Data Analysis'],
-    image: '/public/images/project-3.jpg',
+    image: '/images/project-3.jpg',
     github: '#',
     live: '#'
   }
